@@ -4,11 +4,11 @@ export default function createStore(initialState) {
     let currentState = initialState;
     const listeners = new Set();
     const store = {
-        getState: () => structuredClone(currentState),
+        getState: () => currentState,
         setState: newState => store.setAllState({...currentState, ...newState}),
         setAllState: newState => {
             currentState = newState;
-            listeners.forEach(listener => listener(currentState));
+            listeners.forEach(listener => listener(store.getState()));
         },
         subscribe: listener => {
             listeners.add(listener);
