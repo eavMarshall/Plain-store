@@ -1,4 +1,4 @@
-#Simple create store
+# Simple create store
 Create store using reacts useSyncExternalStore hook, letting you create stores from plain objects
 
 ````
