@@ -17,6 +17,7 @@ export default function createStore(initialState) {
         useStore: () => (selector = state => state) => useSyncExternalStore(
             store.subscribe, () => selector(store.getState())
         ),
+        resetStore: () => store.setAllState(initialState),
     };
     return store;
 }
