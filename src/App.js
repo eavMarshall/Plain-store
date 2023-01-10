@@ -11,10 +11,15 @@ const App = () => {
     return <div>
         <h1>Hello world</h1>
 
-        <div onClick={() => AppStore.setState({key1: "I'm clicked!!"})}>Key1 = {key1}</div>
-        <div onClick={() => AppStore.setState({key2: "I'm clicked!!"})}>Key2 = {key2}</div>
-        <div onClick={() => AppStore.setState({key3: "I'm clicked!!"})}>Key3 = {key3}</div>
-        <div onClick={() => AppStore.resetStore()}>Reset</div>
+        <button onClick={() => AppStore.setState({key1: "I'm clicked!!"})}>Key1 = {key1}</button>
+        <br/>
+        <button onClick={() => AppStore.setState({key2: "I'm clicked!!"})}>Key2 = {key2}</button>
+        <br/>
+        <button onClick={() => AppStore.setState({key3: "I'm clicked!!"})}>Key3 = {key3}</button>
+        <br/>
+        <button onClick={() => AppStore.resetStore()}>Reset</button>
+        <br/>
+        <p>install: <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en">redux-devtools chrome plugin</a></p>
     </div>
 };
 
