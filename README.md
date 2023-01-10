@@ -12,10 +12,7 @@ const initState = {
 
 const store = {
     ...createStore(initState),
-
-    resetStore: () => {
-        store.setAllState(initState)
-    }
+    // custom setters/getters here
 };
 
 export default store;
