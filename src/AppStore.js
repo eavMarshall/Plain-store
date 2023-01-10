@@ -8,10 +8,6 @@ const initState = {
 
 const store = {
     ...createStore(initState),
-
-    resetStore: () => {
-        store.setAllState(initState)
-    }
 };
 
 export default store;
