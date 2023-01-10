@@ -1,6 +1,8 @@
 # Simple create store
 
 Create your store
+
+AppStore.js
 ````
 import createStore from "src/common/createStore";
 
