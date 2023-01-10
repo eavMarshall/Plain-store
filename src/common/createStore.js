@@ -15,7 +15,7 @@ export default function createStore(initialState, storeName = false) {
         setAllState: newState => {
             currentState = newState;
             listeners.forEach(listener => listener(currentState));
-            connection?.send("currentState", currentState);
+            connection?.send("updateState", currentState);
         },
         subscribe: listener => {
             listeners.add(listener);
