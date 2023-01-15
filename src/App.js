@@ -17,6 +17,12 @@ const App = () => {
         <br/>
         <button onClick={() => AppStore.setState({key3: "I'm clicked!!"})}>Key3 = {key3}</button>
         <br/>
+        <button onClick={() => AppStore.setKey1("I'm clicked!!")}>Key1 = {key1}</button>
+        <br/>
+        <button onClick={() => AppStore.setKey2("I'm clicked!!")}>Key2 = {key2}</button>
+        <br/>
+        <button onClick={() => AppStore.setKey3("I'm clicked!!")}>Key3 = {key3}</button>
+        <br/>
         <button onClick={() => AppStore.resetStore()}>Reset</button>
         <br/>
         <p>install: <a href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en">redux-devtools chrome plugin</a></p>

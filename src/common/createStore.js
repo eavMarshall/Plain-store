@@ -15,10 +15,10 @@ export default function createStore(initialState, storeName = false) {
 
     const store = {
         getState: () => currentState,
-        setState: newState => store.setAllState({...currentState, ...newState}),
-        setAllState: newState => {
+        setState: (newState, actionName = false) => store.setAllState({...currentState, ...newState, actionName}, actionName),
+        setAllState: (newState, actionName) => {
             setStateAndNotifyListeners(newState);
-            connection?.send("currentState", currentState);
+            connection?.send(actionName ? actionName : "currentState", currentState);
         },
         subscribe: listener => {
             listeners.add(listener);
