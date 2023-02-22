@@ -44,3 +44,6 @@ const App = () => {
 
 export default App;
 ````
+
+Integration with [Redux dev tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+Allows you to do time travel inspection
